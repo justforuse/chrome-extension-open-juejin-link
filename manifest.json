@@ -1,0 +1,27 @@
+{
+    "manifest_version": 2,
+    "name": "Open juejin link in new tab",
+    "description": "Open the link in article in new tab without confirmation",
+    "version": "1.0",
+    "icons": {
+        "16": "icon16.png",
+        "32": "icon32.png",
+        "48": "icon48.png",
+        "128": "icon128.png"
+    },
+    "permissions": [
+        "activeTab",
+        "tabs"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "https://www.juejin.cn/*",
+                "https://juejin.cn/*"
+            ],
+            "js": [
+                "content.js"
+            ]
+        }
+    ]
+}
